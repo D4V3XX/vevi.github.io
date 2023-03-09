@@ -6,6 +6,7 @@
 		<style>
 			body { margin: 0; }
 		</style>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<script type="module">
@@ -17,10 +18,9 @@
 			const renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
-            const texture = new THREE.TextureLoader().load( 'images/velibor.jpg' );
-
+			const texture = new THREE.TextureLoader().load( 'images/velibor.jpg' );
 			const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-            const material = new THREE.MeshBasicMaterial( { map: texture } );
+			const material = new THREE.MeshBasicMaterial( { map: texture } );
 			const cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
 
@@ -37,5 +37,7 @@
 
 			animate();
 		</script>
+
+<div id="info">Ljubim Ruke</div>
 	</body>
 </html>
